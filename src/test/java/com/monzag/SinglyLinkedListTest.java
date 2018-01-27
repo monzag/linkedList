@@ -85,6 +85,15 @@ class SinglyLinkedListTest {
         assertEquals(expected, linkedList.toString());
     }
 
+    @Test
+    void insertInTheMiddle() {
+        addDataToLinkedList();
+        linkedList.insert(3, 22);
+        linkedList.insert(6, 44);
+        String expected = "0 1 2 22 3 4 44 5 6 7 8 9 10";
+        assertEquals(expected, linkedList.toString());
+    }
+
     public void addDataToLinkedList() {
         for (int i = 0; i < 11; i++) {
             linkedList.add(i);
