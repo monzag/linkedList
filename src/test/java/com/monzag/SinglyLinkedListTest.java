@@ -53,6 +53,14 @@ class SinglyLinkedListTest {
     }
 
     @Test
+    void addStringTest() {
+        linkedList.add("abc");
+        linkedList.add("efg");
+        String expected = "abc efg";
+        assertEquals(expected, linkedList.toString());
+    }
+
+    @Test
     void getTest() {
         addDataToLinkedList();
         int expected = 2;
