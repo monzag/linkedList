@@ -1,14 +1,21 @@
 package com.monzag;
 
+import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.*;
 
 class SinglyLinkedListTest {
 
+    private SinglyLinkedList linkedList;
+
+    @BeforeEach
+    void createLinkedList() {
+        this.linkedList = new SinglyLinkedList();
+    }
+
     @Test
     void addTest() {
-        SinglyLinkedList linkedList = new SinglyLinkedList();
         linkedList.add(0);
         linkedList.add(1);
         linkedList.add(2);
