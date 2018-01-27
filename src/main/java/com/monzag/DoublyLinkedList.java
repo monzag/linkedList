@@ -39,4 +39,12 @@ public class DoublyLinkedList extends SinglyLinkedList {
         tempLast.setPrevious(last);
         last = tempLast;
     }
+    
+    @Override
+    protected void insertInTheMiddle(int index, Object item) {
+        Node oldItemInIndex = get(index);
+        Node newItemInIndex = new Node(item, oldItemInIndex, oldItemInIndex.getPrevious());
+        oldItemInIndex.setPrevious(newItemInIndex);
+        oldItemInIndex.getPrevious().setNext(newItemInIndex);
+    }
 }
