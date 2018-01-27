@@ -3,13 +3,27 @@ package com.monzag;
 public class SinglyLinkedList {
 
     public Node head;
+    public Node last;
     public int length;
 
     public SinglyLinkedList() {
     }
 
-    public void add(int item) {
+    public void add(Object item) {
+        Node node = new Node(item);
 
+        if (head == null) {
+            this.head = node;
+            this.head.setNext(null);
+            this.last = node;
+
+        } else {
+            last.setNext(node);
+            node.setNext(null);
+            this.last = node;
+        }
+
+        length++;
     }
 
     public void insert(int index, int item) {
