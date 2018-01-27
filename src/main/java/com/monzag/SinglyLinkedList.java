@@ -14,12 +14,10 @@ public class SinglyLinkedList {
 
         if (head == null) {
             this.head = node;
-            this.head.setNext(null);
-            this.last = node;
+            this.last = this.head;
 
         } else {
             last.setNext(node);
-            node.setNext(null);
             this.last = node;
         }
 
