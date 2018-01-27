@@ -31,7 +31,10 @@ public class SinglyLinkedList {
     }
 
     public void remove(int index) {
-
+        Node beforeRemoved = get(index-1);
+        if (beforeRemoved != null) {
+            beforeRemoved.setNext(beforeRemoved.getNext().getNext());
+        }
     }
 
     public Node get(int index) {
