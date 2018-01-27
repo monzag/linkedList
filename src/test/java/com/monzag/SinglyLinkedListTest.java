@@ -47,6 +47,14 @@ class SinglyLinkedListTest {
     }
 
     @Test
+    void lastTest() {
+        linkedList.add(1);
+        linkedList.add(2);
+        int expected = 2;
+        assertEquals(expected, linkedList.last.getData());
+    }
+
+    @Test
     void addTest() {
         linkedList.add(0);
         linkedList.add(1);
