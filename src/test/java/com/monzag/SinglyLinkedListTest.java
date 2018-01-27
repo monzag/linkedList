@@ -99,7 +99,4 @@ class SinglyLinkedListTest {
             linkedList.add(i);
         }
     }
-
-
-
 }
