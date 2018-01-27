@@ -35,19 +35,19 @@ public class SinglyLinkedList {
         length++;
     }
 
-    private void insertToStart(Object item) {
+    protected void insertToStart(Object item) {
         Node tempHead = new Node(item);
         tempHead.setNext(head);
         head = tempHead;
     }
 
-    private void insertToEnd(Object item) {
+    protected void insertToEnd(Object item) {
         Node tempLast = new Node(item);
         last.setNext(tempLast);
         last = tempLast;
     }
 
-    private void insertInTheMiddle(int index, Object item) {
+    protected void insertInTheMiddle(int index, Object item) {
         Node beforeInserting = get(index - 1);
         Node newIem = new Node(item, beforeInserting.getNext());
         beforeInserting.setNext(newIem);
