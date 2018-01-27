@@ -11,4 +11,10 @@ public class NodeDoubly {
         this.previous = null;
         this.next = null;
     }
+
+    public NodeDoubly(Object data, Node previous, Node next) {
+        this.data = data;
+        this.previous = previous;
+        this.next = next;
+    }
 }
