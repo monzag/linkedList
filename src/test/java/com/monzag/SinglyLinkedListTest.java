@@ -15,6 +15,11 @@ class SinglyLinkedListTest {
     }
 
     @Test
+    void headNullTest() {
+        assertNull(linkedList.head);
+    }
+
+    @Test
     void addTest() {
         linkedList.add(0);
         linkedList.add(1);
