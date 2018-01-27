@@ -27,8 +27,15 @@ public class SinglyLinkedList {
     }
 
     public void insert(int index, int item) {
-
+        if (index == 0) {
+            insertToStart(item);
+        } else if (index >= length - 1 ) {
+            insertToEnd(item);
+        } else {
+            insertInTheMiddle(index, item);
+        }
     }
+
 
     public void remove(int index) {
         Node beforeRemoved = get(index-1);
