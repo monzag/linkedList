@@ -20,12 +20,6 @@ class SinglyLinkedListTest {
     }
 
     @Test
-    void headNotNullTest() {
-        linkedList.add(0);
-        assertNotNull(linkedList.head);
-    }
-
-    @Test
     void headTest() {
         linkedList.add(0);
         linkedList.add(1);
