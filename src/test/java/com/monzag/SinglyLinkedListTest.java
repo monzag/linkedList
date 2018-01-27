@@ -57,4 +57,15 @@ class SinglyLinkedListTest {
         assertEquals(expected, linkedList.toString());
     }
 
+    @Test
+    void getTest() {
+        linkedList.add(10);
+        linkedList.add(8);
+        linkedList.add(5);
+        int expected = 5;
+        assertEquals(expected, linkedList.get(2).getData());
+    }
+
+
+
 }
