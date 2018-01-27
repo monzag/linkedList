@@ -48,6 +48,12 @@ public class SinglyLinkedList {
         last = tempLast;
     }
 
+    private void insertInTheMiddle(int index, int item) {
+        Node beforeInserting = get(index - 1);
+        Node newIem = new Node(item, beforeInserting.getNext());
+        beforeInserting.setNext(newIem);
+    }
+
     public void remove(int index) {
         Node beforeRemoved = get(index-1);
         if (beforeRemoved != null) {
