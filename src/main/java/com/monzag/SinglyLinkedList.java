@@ -33,4 +33,17 @@ public class SinglyLinkedList {
     public void remove(int index) {
 
     }
+
+    @Override
+    public String toString() {
+        String output = "";
+
+        Node current = head;
+        while (current != null) {
+            output += current.getData().toString() + " ";
+            current = current.getNext();
+        }
+
+        return output;
+    }
 }
