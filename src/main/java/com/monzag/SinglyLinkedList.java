@@ -41,7 +41,13 @@ public class SinglyLinkedList {
         tempHead.setNext(head);
         head = tempHead;
     }
-    
+
+    private void insertToEnd(int item) {
+        Node tempLast = new Node(item);
+        last.setNext(tempLast);
+        last = tempLast;
+    }
+
     public void remove(int index) {
         Node beforeRemoved = get(index-1);
         if (beforeRemoved != null) {
