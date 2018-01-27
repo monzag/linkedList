@@ -23,6 +23,16 @@ class DoublyLinkedListTest {
         assertEquals(expected, dbLinkedList.toString());
     }
 
+    @Test
+    void insertInTheMiddleTest() {
+        addDataToLinkedList();
+        dbLinkedList.insert(2, 12);
+        dbLinkedList.insert(6, 44);
+        String expected = "0 1 12 2 3 4 44 5 6 7 8 9 10";
+        assertEquals(expected, dbLinkedList.toString());
+    }
+
+
     public void addDataToLinkedList() {
         for (int i = 0; i < 11; i++) {
             dbLinkedList.add(i);
