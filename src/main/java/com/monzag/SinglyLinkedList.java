@@ -34,6 +34,7 @@ public class SinglyLinkedList {
         } else {
             insertInTheMiddle(index, item);
         }
+        length++;
     }
 
     private void insertToStart(Object item) {
@@ -58,6 +59,7 @@ public class SinglyLinkedList {
         Node beforeRemoved = get(index-1);
         if (beforeRemoved != null) {
             beforeRemoved.setNext(beforeRemoved.getNext().getNext());
+            length--;
         }
     }
 
