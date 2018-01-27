@@ -21,17 +21,15 @@ class SinglyLinkedListTest {
 
     @Test
     void headTest() {
-        linkedList.add(0);
-        linkedList.add(1);
+        addDataToLinkedList();
         int expected = 0;
         assertEquals(expected, linkedList.head.getData());
     }
 
     @Test
     void lengthTest() {
-        linkedList.add(0);
-        linkedList.add(1);
-        int expected = 2;
+        addDataToLinkedList();
+        int expected = 11;
         assertEquals(expected, linkedList.length);
     }
 
@@ -42,27 +40,22 @@ class SinglyLinkedListTest {
 
     @Test
     void lastTest() {
-        linkedList.add(1);
-        linkedList.add(2);
-        int expected = 2;
+        addDataToLinkedList();
+        int expected = 10;
         assertEquals(expected, linkedList.last.getData());
     }
 
     @Test
     void addTest() {
-        linkedList.add(0);
-        linkedList.add(1);
-        linkedList.add(2);
-        String expected = "0 1 2";
+        addDataToLinkedList();
+        String expected = "0 1 2 3 4 5 6 7 8 9 10";
         assertEquals(expected, linkedList.toString());
     }
 
     @Test
     void getTest() {
-        linkedList.add(10);
-        linkedList.add(8);
-        linkedList.add(5);
-        int expected = 5;
+        addDataToLinkedList();
+        int expected = 2;
         assertEquals(expected, linkedList.get(2).getData());
     }
 
