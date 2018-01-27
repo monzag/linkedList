@@ -31,4 +31,12 @@ public class DoublyLinkedList extends SinglyLinkedList {
         }
         length++;
     }
+
+    @Override
+    protected void insertToEnd(Object item) {
+        Node tempLast = new Node(item);
+        last.setNext(tempLast);
+        tempLast.setPrevious(last);
+        last = tempLast;
+    }
 }
