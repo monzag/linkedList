@@ -34,6 +34,18 @@ public class SinglyLinkedList {
 
     }
 
+    public Node get(int index) {
+        Node current = null;
+
+        if (index > 0 && index < length) {
+            current = head;
+            for (int i = 0; i < index; i++) {
+                current = current.getNext();
+            }
+        }
+        return current;
+    }
+
     @Override
     public String toString() {
         String output = "";
