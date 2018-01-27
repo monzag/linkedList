@@ -44,6 +44,6 @@ public class SinglyLinkedList {
             current = current.getNext();
         }
 
-        return output;
+        return output.substring(0, output.length() - 1);
     }
 }
