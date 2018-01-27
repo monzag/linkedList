@@ -66,6 +66,12 @@ class SinglyLinkedListTest {
         assertEquals(expected, linkedList.get(2).getData());
     }
 
+    public void addDataToLinkedList() {
+        for (int i = 0; i < 11; i++) {
+            linkedList.add(i);
+        }
+    }
+
 
 
 }
