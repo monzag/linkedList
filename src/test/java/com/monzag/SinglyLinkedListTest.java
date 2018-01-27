@@ -59,6 +59,15 @@ class SinglyLinkedListTest {
         assertEquals(expected, linkedList.get(2).getData());
     }
 
+    @Test
+    void removeTest() {
+        addDataToLinkedList();
+        linkedList.remove(3);
+        linkedList.remove(8);
+        String expected = "0 1 2 4 5 6 7 8 10";
+        assertEquals(expected, linkedList.toString());
+    }
+
     public void addDataToLinkedList() {
         for (int i = 0; i < 11; i++) {
             linkedList.add(i);
